@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8C0C9D28-EF19-412D-9A32-C851F7832737</string>
+	<key>IDESourceControlProjectName</key>
+	<string>sdk-helper</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DB5C5C82-BC0D-426A-9350-9C9B83DEC9D2</key>
+		<string>http://192.168.0.247/svnsdkmobile/iOS</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trunk/Helpers/sdk-helper/sdk-helper.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DB5C5C82-BC0D-426A-9350-9C9B83DEC9D2</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>DB5C5C82-BC0D-426A-9350-9C9B83DEC9D2</key>
+		<string>http://192.168.0.247/svnsdkmobile</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://192.168.0.247/svnsdkmobile/iOS/trunk/Helpers/sdk-helper/sdk-helper.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DB5C5C82-BC0D-426A-9350-9C9B83DEC9D2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>iOS/branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
+			<string>iOS/tags</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>iOS/trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DB5C5C82-BC0D-426A-9350-9C9B83DEC9D2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sdkmobile</string>
+		</dict>
+	</array>
+</dict>
+</plist>
