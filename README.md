@@ -7,6 +7,21 @@ This sample project is provided with the usual disclaimer about how it comes `WI
 The goal of this sample project is to give developers a working example of how to start the Weemo singleton, connect and disconnect, authenticate on our network, and place an audio/video call, and to keep it simple.
 
 
+### Install the sources
+
+```
+git clone git@github.com:weemo/iOS-SDK-Helper.git
+git submodule init
+git submodule update
+```
+
+### Update the sources
+
+```
+git pull
+git submodule update
+```
+
 # Global Architecture
 
 This project is divided in two main classes:
