@@ -18,9 +18,11 @@
 @synthesize b_profile;
 @synthesize b_toggleVideo;
 @synthesize b_toggleAudio;
+@synthesize b_rotate;
 @synthesize call;
 @synthesize v_videoIn;
 @synthesize v_videoOut;
+
 
 #pragma mark - Controller life cycle
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -33,6 +35,11 @@
 	return self;
 }
 
+- (void)viewDidLoad
+{
+	[super viewDidLoad];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
@@ -40,7 +47,9 @@
 	[[self call]setDelegate:self];
 	[[self call]setViewVideoIn:[self v_videoIn]];
 	[[self call]setViewVideoOut:[self v_videoOut]];
+	[[self b_rotate] setSelected:[[[Weemo instance] activeCall]followDeviceOrientation]];
 	[self resizeView:[self interfaceOrientation]];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,6 +73,7 @@
 
 - (void)resizeVideoIn
 {
+	if ([[self call]getVideoProfile].height <= 0 && [[self call]getVideoProfile].width <= 0) return;
 	float hRat = [[self call]getVideoProfile].height / [[self view]bounds].size.height;
 	float wRat = [[self call]getVideoProfile].width / [[self view]bounds].size.width;
 	//we resize so that the biggest of the Rat is set to 1
@@ -110,6 +120,11 @@
 	}
 }
 
+- (IBAction)rotate:(id)sender
+{
+//	[[[Weemo instance] activeCall]setFollowDeviceOrientation:![[[Weemo instance] activeCall]followDeviceOrientation]];
+//	[[self b_rotate] setSelected:[[[Weemo instance] activeCall]followDeviceOrientation]];
+}
 
 #pragma mark - Call delegate
 

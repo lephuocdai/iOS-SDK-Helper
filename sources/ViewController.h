@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *b_call;
 @property (weak, nonatomic) IBOutlet UIButton *b_sendLog;
 
+
 @property (weak, nonatomic) IBOutlet UITextField *tf_yourID; //< the UserID of the user
 @property (weak, nonatomic) IBOutlet UITextField *tf_contactID; //< The UserID of the contact you want to call
 

@@ -115,7 +115,6 @@
 	
 	NSString *storyboardname = ([[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPhone)?@"iphone":@"ipad";
 	_cvc_active = [[UIStoryboard storyboardWithName:storyboardname bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"CallViewController"];
-	
 	[[[Weemo instance]activeCall]setDelegate:_cvc_active];
 	[self addChildViewController:_cvc_active];
 }
@@ -136,7 +135,6 @@
 
 - (void)removeCallView
 {
-	
 	[_cvc_active removeFromParentViewController];
 	[[_cvc_active view]removeFromSuperview];
 	[[self l_callStatus]setText:@"<no call>"];
@@ -210,6 +208,7 @@
 				NSLog(@">>>> Call Proceeding");
 				[[self l_callStatus] setText:@"Proceeding"];
 				[self createCallView];
+				[self addCallView];
 			}break;
 			case CALLSTATUS_INCOMING:
 			{
@@ -275,8 +274,9 @@
 #pragma mark - WeemoDelegation
 - (void)weemoCallCreated:(WeemoCall*)call
 {
+	[call setFollowDeviceOrientation:NO];
 	NSLog(@">>>> Controller callCreated: 0x%X", [call callStatus]);
-	if ([call callStatus] == CALLSTATUS_INCOMING)
+	if ([call callStatus] == CALLSTATUS_RINGING)
 	{
 		[self setStatus:3];
 		incomingcall = [[UIAlertView alloc]initWithTitle:@"Incoming Call"

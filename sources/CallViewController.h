@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *b_toggleVideo;
 @property (weak, nonatomic) IBOutlet UIButton *b_toggleAudio;
 @property (weak, nonatomic) IBOutlet UIButton *b_switchVideo;
+@property (weak, nonatomic) IBOutlet UIButton *b_rotate;
 
 @property (weak, nonatomic) IBOutlet UIView *v_videoIn;
 @property (weak, nonatomic) IBOutlet UIView *v_videoOut;
@@ -41,6 +42,11 @@
  * The user tapped on "Enable Mic." button
  */
 - (IBAction)toggleAudio:(id)sender;
+
+/**
+ * The user switched the rotate button
+ */
+- (IBAction)rotate:(id)sender;
 
 
 #pragma mark - WeemoCallDelegate
