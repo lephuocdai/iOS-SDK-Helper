@@ -31,6 +31,7 @@
 	if (self)
 	{
 		[self setCall:[[Weemo instance] activeCall]];
+		fillVideo = NO;
 	}
 	return self;
 }
@@ -52,12 +53,6 @@
 
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recated.
-}
-
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)tO duration:(NSTimeInterval)duration
 {
 	[self resizeView:tO];
@@ -73,14 +68,22 @@
 
 - (void)resizeVideoIn
 {
-	if ([[self call]getVideoProfile].height <= 0 && [[self call]getVideoProfile].width <= 0) return;
-	float hRat = [[self call]getVideoProfile].height / [[self view]bounds].size.height;
-	float wRat = [[self call]getVideoProfile].width / [[self view]bounds].size.width;
-	//we resize so that the biggest of the Rat is set to 1
-	[[self v_videoIn]setFrame:CGRectMake(0., 0.,
-										 [[self call] getVideoProfile].width / ((hRat > wRat)?hRat:wRat),
-										 [[self call] getVideoProfile].height / ((hRat > wRat)?hRat:wRat))];
-	[[self v_videoIn]setCenter:CGPointMake(self.view.bounds.size.width/2., self.view.bounds.size.height/2.)];
+	if ([[self call]getVideoInProfile].height <= 0 && [[self call]getVideoInProfile].width <= 0) return;
+	float hRat = [[self call]getVideoInProfile].height / [[self view]bounds].size.height;
+	float wRat = [[self call]getVideoInProfile].width / [[self view]bounds].size.width;
+	if (fillVideo)
+	{
+		//we resize so that the biggest of the Rat is set to 1
+		[[self v_videoIn]setFrame:CGRectMake(0., 0.,
+											 [[self call] getVideoInProfile].width / ((hRat > wRat)?hRat:wRat),
+											 [[self call] getVideoInProfile].height / ((hRat > wRat)?hRat:wRat))];
+		[[self v_videoIn]setCenter:CGPointMake(self.view.bounds.size.width/2., self.view.bounds.size.height/2.)];
+	} else {
+		[[self v_videoIn]setFrame:CGRectMake(0., 0.,
+											 [[self call] getVideoInProfile].width / ((hRat < wRat)?hRat:wRat),
+											 [[self call] getVideoInProfile].height / ((hRat < wRat)?hRat:wRat))];
+		[[self v_videoIn]setCenter:CGPointMake(self.view.bounds.size.width/2., self.view.bounds.size.height/2.)];
+	}
 }
 
 #pragma mark - Actions
@@ -207,7 +210,14 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	
+	UITouch *touched = [touches anyObject];
+	if ([touched view] == [self v_videoIn])
+	{
+		fillVideo = !fillVideo;
+		dispatch_async(dispatch_get_main_queue(), ^{
+			[self resizeVideoIn];
+		});
+	}
 }
 
 @end

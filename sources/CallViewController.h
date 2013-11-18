@@ -6,7 +6,9 @@
 
 
 @interface CallViewController : UIViewController <WeemoCallDelegate>
-
+{
+	BOOL fillVideo;
+}
 @property (weak, nonatomic) IBOutlet UIButton *b_hangup;
 @property (weak, nonatomic) IBOutlet UIButton *b_profile;
 @property (weak, nonatomic) IBOutlet UIButton *b_toggleVideo;

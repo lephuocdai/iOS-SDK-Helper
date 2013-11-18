@@ -36,7 +36,7 @@ The Weemo iOS-SDK initialization code is found in the `viewDidLoad:` method of t
 
 	…
 	NSError *err;
-	[Weemo WeemoWithAPIKey:APIKEY andDelegate:self error:&err];
+	[Weemo WeemoWithAppID:APIKEY andDelegate:self error:&err];
 	…
 
 Note that we don't keep a reference to the created Weemo singleton (which is available through the class method `+ (id)instance`), nor do we test the error this method can return (which is bad practice).
@@ -44,8 +44,8 @@ Note that we don't keep a reference to the created Weemo singleton (which is ava
 Authentication takes place in the action started by the `b_authenticate` UIButton, `authenticate:`.
 
 	…
-	if ([[Weemo instance]authenticateWithUserID:[[self tf_yourID]text]
-								   toDomain:TECHDOMAIN])
+	if ([[Weemo instance]authenticateWithToken:[[self tf_yourID]text]
+								   andType:USERTYPE_INTERNAL])
 	…
 
 Contrary to what seems implied in this code, the connection is not done synchronously. The boolean returned by the authentication method depends on <a href=https://github.com/weemo/poc/wiki/Naming-rules>the correctness</a> of the UserID used.
@@ -55,9 +55,9 @@ If the Weemo singleton is connected, the `Authenticate` button is changed in a `
 	…
 	[[Weemo instance] disconnect];
 	…
-This method disconnected the Weemo singleton from the network. The singleton is not destroyed. To reconnect, simply use the `WeemoWithAPIKey:andDelegate:error:`. The user have to re-authenticate afterwards.
+This method disconnected the Weemo singleton from the network. The singleton is not destroyed. To reconnect, simply use the `WeemoWithAppID:andDelegate:error:`. The user have to re-authenticate afterwards.
 
-
+To create a call, one must simply call `createCall:` of the Weemo instance] with the contactID to call. The method `[[Weemo instance]createCall:andSetDisplayName:]` allows the Host Application to set the display name of the contact called.
 
 ### Delegate
 
@@ -65,7 +65,7 @@ All those methods are called by the Weemo singleton object and implemented in th
 
 ##### `weemoCallCreated:`
 
-This method is called upon receiving a call (status is `CALLSTATUS_INCOMING`) or upon placing a call (another status `CALLSTATUS_PROCEEDING` or `CALLSTATUS_RINGING`). The call status tells which case applies.
+This method is called upon receiving a call (status is `CALLSTATUS_INCOMING`) or upon placing a call (status is `CALLSTATUS_RINGING`). The call status tells which case applies.
 
 ##### `weemoDidConnect:`
 

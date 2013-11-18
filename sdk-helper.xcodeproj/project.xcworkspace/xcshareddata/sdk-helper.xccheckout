@@ -5,47 +5,48 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8C0C9D28-EF19-412D-9A32-C851F7832737</string>
+	<string>44BBD24D-89BF-43CC-AC36-B566B3C0A808</string>
 	<key>IDESourceControlProjectName</key>
 	<string>sdk-helper</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DB5C5C82-BC0D-426A-9350-9C9B83DEC9D2</key>
-		<string>http://192.168.0.247/svnsdkmobile/iOS</string>
+		<key>7CA328B8-7C39-4F73-84D5-936CD123D72C</key>
+		<string>https://github.com/weemo/iOS-SDK.git</string>
+		<key>B0737A65-8C94-48B9-9770-CEEF2FAA764E</key>
+		<string>https://github.com/weemo/iOS-SDK-Helper</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>trunk/Helpers/sdk-helper/sdk-helper.xcodeproj/project.xcworkspace</string>
+	<string>sdk-helper.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DB5C5C82-BC0D-426A-9350-9C9B83DEC9D2</key>
-		<string>../../../../..</string>
-	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>DB5C5C82-BC0D-426A-9350-9C9B83DEC9D2</key>
-		<string>http://192.168.0.247/svnsdkmobile</string>
+		<key>7CA328B8-7C39-4F73-84D5-936CD123D72C</key>
+		<string>../../WeemoSDK</string>
+		<key>B0737A65-8C94-48B9-9770-CEEF2FAA764E</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://192.168.0.247/svnsdkmobile/iOS/trunk/Helpers/sdk-helper/sdk-helper.xcodeproj</string>
+	<string>https://github.com/weemo/iOS-SDK-Helper</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DB5C5C82-BC0D-426A-9350-9C9B83DEC9D2</string>
+	<string>B0737A65-8C94-48B9-9770-CEEF2FAA764E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
-			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
-			<string>iOS/branches</string>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
-			<string>iOS/tags</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>iOS/trunk</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DB5C5C82-BC0D-426A-9350-9C9B83DEC9D2</string>
+			<string>B0737A65-8C94-48B9-9770-CEEF2FAA764E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>sdkmobile</string>
+			<string>iOS-SDK-Helper</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7CA328B8-7C39-4F73-84D5-936CD123D72C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WeemoSDK</string>
 		</dict>
 	</array>
 </dict>

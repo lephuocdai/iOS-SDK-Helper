@@ -343,11 +343,11 @@
 		} else {
 			[[self tv_errorField]setText:@"<No Error>"];
 		}
-		if (autoreconnect)
-		{
-			NSError *err;
-			[Weemo WeemoWithAppID:MOBILEAPPID andDelegate:self error:&err];
-		}
+//		if (autoreconnect)
+//		{
+//			NSError *err;
+//			[Weemo WeemoWithAppID:MOBILEAPPID andDelegate:self error:&err];
+//		}
 	});
 
 }
