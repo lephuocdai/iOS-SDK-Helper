@@ -6,7 +6,7 @@ This sample project is provided with the usual disclaimer about how it comes `WI
 
 The goal of this sample project is to give developers a working example of how to start the Weemo singleton, connect and disconnect, authenticate on our network, and place an audio/video call, and to keep it simple.
 
-Please see the [wiki](https://github.com/weemo/iOS-SDK-Helerp/wiki) for more details regarding the implementation of the Helper.
+Please see the [wiki](https://github.com/weemo/iOS-SDK-Helper/wiki) for more details regarding the implementation of the Helper.
 
 ### Fetch the sources
 
