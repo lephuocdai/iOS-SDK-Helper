@@ -19,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIView *v_videoIn;
 @property (weak, nonatomic) IBOutlet UIView *v_videoOut;
 
-
 @property (weak, nonatomic) WeemoCall *call;
 
 /**

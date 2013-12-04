@@ -1,4 +1,3 @@
-//
 //  ViewController.m
 //  sdk-helper
 //
@@ -8,25 +7,18 @@
 
 #import "ViewController.h"
 
-
-@interface ViewController ()
-@property (nonatomic)BOOL autoreconnect;
-@end
-
 @implementation ViewController
 
 @synthesize l_callStatus;
 @synthesize tv_errorField;
 @synthesize status;
 @synthesize displayName;
-@synthesize autoreconnect;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	NSLog(@"Weemo SDK version: %@", [Weemo getVersion]);
 	_cvc_active = nil;
-	autoreconnect = NO;
 	[[self b_authenticate]setTitle:@"Auth." forState:UIControlStateNormal];
 	NSError *err;
 	//initializing the SDK
@@ -146,7 +138,6 @@
 {
 	[[self tf_contactID]setText:@""];
 	[[self l_callStatus]setText:@"<no call>"];
-	autoreconnect = YES;
 	[[Weemo instance] disconnect];
 }
 
@@ -343,11 +334,8 @@
 		} else {
 			[[self tv_errorField]setText:@"<No Error>"];
 		}
-//		if (autoreconnect)
-//		{
-//			NSError *err;
-//			[Weemo WeemoWithAppID:MOBILEAPPID andDelegate:self error:&err];
-//		}
+		NSError *err;
+		[Weemo WeemoWithAppID:MOBILEAPPID andDelegate:self error:&err];
 	});
 
 }
