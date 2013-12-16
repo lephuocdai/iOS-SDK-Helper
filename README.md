@@ -8,6 +8,8 @@ The goal of this sample project is to give developers a working example of how t
 
 Please see the [wiki](https://github.com/weemo/iOS-SDK-Helper/wiki) for more details regarding the implementation of the Helper.
 
+Please note that, as this application needs a video capture hardware to be used, it can not be used on the iPhone Simulator -- you must run it on an actual device.
+
 ### Fetch the sources
 
 Using "Download ZIP" won't give you anything usable, especially regarding the framework inner architecture. Try to use the CLI on your MacOS computer:
