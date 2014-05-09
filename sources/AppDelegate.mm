@@ -7,15 +7,80 @@
 //
 
 #import "AppDelegate.h"
+#import "AlertSystem.h"
 
 @implementation AppDelegate
+{
+	NSDictionary *lp;
+}
+
+//creates a dictionary with the query elements. based on the fact the URL is something like scheme://?query1=a&query2=b
+//the answer will be a dictionary [{object,key}] == [{a, query1}, {b, query2}]
+- (NSDictionary *)parseURL:(NSURL *)entry
+{
+	NSMutableDictionary *connectionParameters = [[NSMutableDictionary alloc]init];
+	//PFM
+	[connectionParameters setObject:[entry host] forKeyedSubscript:KEY_PFMHOST];
+	[connectionParameters setObject:[entry path] forKeyedSubscript:KEY_PFMPATH];
+	
+	//launchArguments
+	if ([entry query] == nil || [[entry query]isEqualToString:@""]) return connectionParameters;
+	NSArray * parameters = [[entry query] componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"&="]];
+	
+	if (!([parameters count] & 1))
+	{
+		NSMutableArray * keys = [NSMutableArray array];
+		NSMutableArray * values = [NSMutableArray array];
+		[parameters enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+			if ([obj isEqualToString:@""]) return;
+			if( idx & 1 )
+			{
+				[values addObject:obj];
+			} else {
+				[keys addObject:obj];
+			}
+		}];
+		uint8_t miniCount = fminf([keys count], [values count]);
+		for (uint8_t l = 0; l < miniCount; l++)
+		{
+			[connectionParameters setObject:[values objectAtIndex:l] forKey:[keys objectAtIndex:l]];
+		}
+	}
+	return connectionParameters;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	
-    return YES;
+	if (!launchOptions)
+	{
+		NSArray * args = [[NSProcessInfo processInfo] arguments];
+		if ([args count]>1)
+		{
+			lp =[self parseURL:[NSURL URLWithString:[args objectAtIndex:1]]];
+		}
+	} else {
+		NSLog(@"%@", [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey]);
+		lp = [self parseURL:[launchOptions objectForKey:UIApplicationLaunchOptionsURLKey]];
+	}
+	return YES;
 }
-							
+
+
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+	lp = [self parseURL:url];
+	[[NSNotificationCenter defaultCenter] postNotificationName:kLaunchURL object:self];
+	
+	return YES;
+}
+
+- (NSDictionary *)launchParameters
+{
+	return lp;
+}
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

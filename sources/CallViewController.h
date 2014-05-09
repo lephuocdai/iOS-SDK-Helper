@@ -4,6 +4,10 @@
 //
 //  Created by Charles Thierry on 7/19/13.
 
+/**
+ * The call view displays the VideoIn (Incoming) and VideoOut (Monitor/Outgoing) videos.
+ *
+ */
 
 @interface CallViewController : UIViewController <WeemoCallDelegate>
 {
@@ -14,21 +18,33 @@
 @property (weak, nonatomic) IBOutlet UIButton *b_toggleVideo;
 @property (weak, nonatomic) IBOutlet UIButton *b_toggleAudio;
 @property (weak, nonatomic) IBOutlet UIButton *b_switchVideo;
-@property (weak, nonatomic) IBOutlet UIButton *b_rotate;
 
+/**
+ * Displays the inbound video
+ */
 @property (weak, nonatomic) IBOutlet UIView *v_videoIn;
+/**
+ * Displays the outbound video
+ */
 @property (weak, nonatomic) IBOutlet UIView *v_videoOut;
 
+@property (weak, nonatomic) IBOutlet UIView *v_callMenu;
+
+/**
+ * Weak link to the WeemoCall. Equivalent to [[Weemo instance] activeCall]
+ */
 @property (weak, nonatomic) WeemoCall *call;
 
 /**
  * The user tapped on the "Hangup" button
  */
 - (IBAction)hangup:(id)sender;
+
 /**
  * The user tapped on the "HD" button
  */
 - (IBAction)profile:(id)sender;
+
 /**
  * The user tapped on the "Enable Video"
  */
@@ -44,11 +60,6 @@
  */
 - (IBAction)toggleAudio:(id)sender;
 
-/**
- * The user switched the rotate button
- */
-- (IBAction)rotate:(id)sender;
-
 
 #pragma mark - WeemoCallDelegate
 //Two methods of the delegate are not implemented
@@ -58,4 +69,5 @@
 - (void)weemoCall:(id)sender callStatus:(int)status;
 - (void)weemoCall:(id)call audioSending:(BOOL)isSending;
 - (void)weemoCall:(id)sender videoSource:(int)source;
+- (void)weemoCall:(id)sender videoOutSizeChange:(CGSize)size;
 @end

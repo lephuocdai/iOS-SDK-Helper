@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="UUk-ml-oOL">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Jnx-8J-07j">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="UUk-ml-oOL" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="12W-uY-s5G">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="b3o-rJ-xT1">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8ni-cq-RVp" userLabel="Button - Logo">
+                                        <rect key="frame" x="1" y="0.0" width="108" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="weemo_logo.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="appSite:" destination="UUk-ml-oOL" eventType="touchUpInside" id="Wo2-fw-ghV"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AppID" minimumFontSize="17" clearButtonMode="whileEditing" id="33n-T2-gHK">
+                                        <rect key="frame" x="213" y="170" width="201" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UID" minimumFontSize="17" clearButtonMode="whileEditing" id="gCY-eP-5OA">
+                                        <rect key="frame" x="213" y="208" width="201" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Display Name" minimumFontSize="17" clearButtonMode="whileEditing" id="jCk-Ci-rGM">
+                                        <rect key="frame" x="213" y="246" width="201" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MBt-Dh-2x3">
+                                        <rect key="frame" x="440" y="246" width="186" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.11" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Press to connect">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" title="Disconnect">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="connect:" destination="UUk-ml-oOL" eventType="touchUpInside" id="C2Z-r7-Ivb"/>
+                                            <action selector="pressButton:" destination="UUk-ml-oOL" eventType="touchDown" id="ZsZ-fe-Hbl"/>
+                                            <action selector="releaseButton:" destination="UUk-ml-oOL" eventType="touchUpOutside" id="Nkm-zU-amu"/>
+                                            <action selector="releaseButton:" destination="UUk-ml-oOL" eventType="touchCancel" id="edL-yE-kqd"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact UID" minimumFontSize="17" clearButtonMode="whileEditing" id="yQn-AA-9MX">
+                                        <rect key="frame" x="213" y="170" width="201" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OcR-ks-2nU">
+                                        <rect key="frame" x="440" y="170" width="186" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.11" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Call">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="call:" destination="UUk-ml-oOL" eventType="touchUpInside" id="r8E-PB-O65"/>
+                                            <action selector="pressButton:" destination="UUk-ml-oOL" eventType="touchDown" id="xte-dg-3Cu"/>
+                                            <action selector="releaseButton:" destination="UUk-ml-oOL" eventType="touchUpOutside" id="22G-Xw-ToK"/>
+                                            <action selector="releaseButton:" destination="UUk-ml-oOL" eventType="touchCancel" id="q57-9o-fwN"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not authentified" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" id="JrV-LV-f8M">
+                                        <rect key="frame" x="213" y="387" width="342" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.4549019608" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="b_call" destination="OcR-ks-2nU" id="vuh-Gn-GGZ"/>
+                        <outlet property="b_connect" destination="MBt-Dh-2x3" id="dyq-Lg-okX"/>
+                        <outlet property="b_logo" destination="8ni-cq-RVp" id="Sru-SP-XRy"/>
+                        <outlet property="l_connectionStatus" destination="JrV-LV-f8M" id="dV1-2e-zo2"/>
+                        <outlet property="tf_UID" destination="gCY-eP-5OA" id="9Cq-BR-TAy"/>
+                        <outlet property="tf_contactid" destination="yQn-AA-9MX" id="TzC-7u-j5Z"/>
+                        <outlet property="tf_displayname" destination="jCk-Ci-rGM" id="ChE-Sp-5f7"/>
+                        <outlet property="tf_mobileappid" destination="33n-T2-gHK" id="PTg-jo-6L1"/>
+                        <outlet property="v_allview" destination="b3o-rJ-xT1" id="hAw-il-VSX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlP-F5-bzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="-287"/>
+        </scene>
+        <!--Call View Controller-->
+        <scene sceneID="fFY-Xl-Wrb">
+            <objects>
+                <viewController storyboardIdentifier="CallViewController" id="s5M-zb-SQo" customClass="CallViewController" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="leh-I6-B1O">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="Bg4-4k-YQF" userLabel="View - videoIn">
+                                <rect key="frame" x="0.0" y="49" width="768" height="973"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="FLu-wH-DVt" userLabel="View - videoOut">
+                                <rect key="frame" x="654" y="907" width="112" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="FQW-cs-3C5">
+                                <rect key="frame" x="165" y="20" width="438" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="rSh-4A-MfR" userLabel="switch">
+                                        <rect key="frame" x="20" y="4" width="56" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                                        <state key="normal" image="call_switch">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="bkgd_selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="bkgd_highlight_white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressButton:" destination="s5M-zb-SQo" eventType="touchDown" id="hRI-hT-KP4"/>
+                                            <action selector="releaseButton:" destination="s5M-zb-SQo" eventType="touchCancel" id="25T-LV-z8o"/>
+                                            <action selector="releaseButton:" destination="s5M-zb-SQo" eventType="touchUpOutside" id="qbB-D6-X76"/>
+                                            <action selector="switchVideo:" destination="s5M-zb-SQo" eventType="touchUpInside" id="B8J-IR-g5C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="lkY-zh-IJd" userLabel="profile">
+                                        <rect key="frame" x="190" y="4" width="56" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <state key="normal" image="call_SD">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="call_HD" backgroundImage="bkgd_selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="bkgd_highlight_white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressButton:" destination="s5M-zb-SQo" eventType="touchDown" id="3C0-Jl-50v"/>
+                                            <action selector="profile:" destination="s5M-zb-SQo" eventType="touchUpInside" id="W0y-Fl-p9U"/>
+                                            <action selector="releaseButton:" destination="s5M-zb-SQo" eventType="touchCancel" id="cpr-hA-mxy"/>
+                                            <action selector="releaseButton:" destination="s5M-zb-SQo" eventType="touchUpOutside" id="swg-kE-VFd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="dYJ-sa-1yz" userLabel="mic.">
+                                        <rect key="frame" x="278" y="4" width="56" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                                        <state key="normal" image="call_mute">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="bkgd_selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="bkgd_highlight_white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressButton:" destination="s5M-zb-SQo" eventType="touchDown" id="dqQ-cP-Xmm"/>
+                                            <action selector="releaseButton:" destination="s5M-zb-SQo" eventType="touchUpOutside" id="WG2-4c-fAE"/>
+                                            <action selector="releaseButton:" destination="s5M-zb-SQo" eventType="touchCancel" id="pQJ-0Y-EH4"/>
+                                            <action selector="toggleAudio:" destination="s5M-zb-SQo" eventType="touchUpInside" id="WA1-Bl-7x9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="egP-Rr-Fq1" userLabel="video">
+                                        <rect key="frame" x="102" y="4" width="56" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" image="call_video">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="bkgd_selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="bkgd_highlight_white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressButton:" destination="s5M-zb-SQo" eventType="touchDown" id="0Bj-S8-E8K"/>
+                                            <action selector="releaseButton:" destination="s5M-zb-SQo" eventType="touchCancel" id="99i-Kg-W3z"/>
+                                            <action selector="releaseButton:" destination="s5M-zb-SQo" eventType="touchUpOutside" id="sWr-SX-78N"/>
+                                            <action selector="toggleVideo:" destination="s5M-zb-SQo" eventType="touchUpInside" id="q7e-aW-X9o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="hhX-Yc-bcH" userLabel="hangup">
+                                        <rect key="frame" x="362" y="4" width="56" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                                        <state key="normal" image="call_hangup">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="bkgd_highlight_red">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hangup:" destination="s5M-zb-SQo" eventType="touchUpInside" id="tn8-Au-ujh"/>
+                                            <action selector="pressButton:" destination="s5M-zb-SQo" eventType="touchDown" id="Xvp-Ux-JDy"/>
+                                            <action selector="releaseButton:" destination="s5M-zb-SQo" eventType="touchCancel" id="373-5m-IZe"/>
+                                            <action selector="releaseButton:" destination="s5M-zb-SQo" eventType="touchUpOutside" id="Tv4-7a-QgA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="b_hangup" destination="hhX-Yc-bcH" id="BOp-87-WDP"/>
+                        <outlet property="b_profile" destination="lkY-zh-IJd" id="355-eG-KBg"/>
+                        <outlet property="b_switchVideo" destination="rSh-4A-MfR" id="Tfh-Cg-c88"/>
+                        <outlet property="b_toggleAudio" destination="dYJ-sa-1yz" id="yyV-ip-Hxb"/>
+                        <outlet property="b_toggleVideo" destination="egP-Rr-Fq1" id="sf2-VE-65Y"/>
+                        <outlet property="v_callMenu" destination="FQW-cs-3C5" id="Ax6-eH-yej"/>
+                        <outlet property="v_videoIn" destination="Bg4-4k-YQF" id="36g-Ua-udw"/>
+                        <outlet property="v_videoOut" destination="FLu-wH-DVt" id="oKx-xK-6qL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hG0-VY-ueF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808" y="-287"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bkgd_highlight_red" width="140" height="140"/>
+        <image name="bkgd_highlight_white" width="140" height="140"/>
+        <image name="bkgd_selected" width="140" height="140"/>
+        <image name="call_HD" width="35" height="35"/>
+        <image name="call_SD" width="35" height="35"/>
+        <image name="call_hangup" width="52" height="52"/>
+        <image name="call_mute" width="42" height="42"/>
+        <image name="call_switch" width="35" height="35"/>
+        <image name="call_video" width="42" height="42"/>
+        <image name="weemo_logo.png" width="90" height="90"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
