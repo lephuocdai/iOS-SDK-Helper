@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "AlertSystem.h"
 
+#import <CrashReporter/CrashReporter.h>
+
 @implementation AppDelegate
 {
 	NSDictionary *lp;
@@ -62,6 +64,7 @@
 		NSLog(@"%@", [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey]);
 		lp = [self parseURL:[launchOptions objectForKey:UIApplicationLaunchOptionsURLKey]];
 	}
+	[[PLCrashReporter sharedReporter] enableCrashReporter];
 	return YES;
 }
 

@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		5626824317ECB69900607829 /* weemo_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5626824217ECB69900607829 /* weemo_logo.png */; };
 		562D3FEE17E842E200A36A27 /* DataGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 562D3FED17E842E200A36A27 /* DataGroup.m */; };
+		565E069A192129560017C3EF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565E0699192129560017C3EF /* MessageUI.framework */; };
+		566440C517A9748C00979C18 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 566440C417A9748C00979C18 /* README.md */; };
 		5668F2251795813F0049285B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5668F2241795813F0049285B /* UIKit.framework */; };
 		5668F2271795813F0049285B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5668F2261795813F0049285B /* Foundation.framework */; };
 		5668F22F1795813F0049285B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5668F22D1795813F0049285B /* InfoPlist.strings */; };
 		5668F2311795813F0049285B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5668F2301795813F0049285B /* main.m */; };
 		5668F2351795813F0049285B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5668F2341795813F0049285B /* AppDelegate.mm */; };
+		566B9444192141A500EC5376 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566B9443192141A500EC5376 /* CrashReporter.framework */; };
 		566F4F7E17992EAB0019DE60 /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566F4F7D17992EAB0019DE60 /* CallViewController.m */; };
 		5679ACCE17F19BE700015AB5 /* ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5679ACCD17F19BE700015AB5 /* ipad.storyboard */; };
 		5679ACD017F1ABBF00015AB5 /* weemo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5679ACCF17F1ABBF00015AB5 /* weemo_white.png */; };
@@ -21,7 +24,11 @@
 		567E4E1D18D30E0C00FDD63C /* AlertSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 567E4E1C18D30E0C00FDD63C /* AlertSystem.m */; };
 		567E4E2018D30E1800FDD63C /* ringback.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 567E4E1E18D30E1800FDD63C /* ringback.aiff */; };
 		567E4E2118D30E1800FDD63C /* ringing.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 567E4E1F18D30E1800FDD63C /* ringing.aiff */; };
+		568EA2451923BC99005B486A /* zipFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 568EA2441923BC99005B486A /* zipFile.m */; };
 		568F80D618608FB1003BC973 /* pictures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568F80D518608FB1003BC973 /* pictures.xcassets */; };
+		56916BFB17A6AE60002A7958 /* libvpx.ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56916BF817A6AE60002A7958 /* libvpx.ios.a */; };
+		56B9988E185B733700ECB5FD /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B9988D185B733700ECB5FD /* libopus.a */; };
+		56D8524B1923ECB900FF643A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D8524A1923ECB900FF643A /* libz.dylib */; };
 		56EAF9D618608BD40056C3B9 /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EAF9D518608BD40056C3B9 /* iphone.storyboard */; };
 		56F090CB17BA26EA007EE2BE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F090CA17BA26E9007EE2BE /* AudioToolbox.framework */; };
 		56F090CD17BA26FF007EE2BE /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F090CC17BA26FF007EE2BE /* CoreVideo.framework */; };
@@ -32,24 +39,25 @@
 		56F090D717BA2754007EE2BE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F090D617BA2754007EE2BE /* CFNetwork.framework */; };
 		56F090D917BA2783007EE2BE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F090D817BA2783007EE2BE /* AVFoundation.framework */; };
 		56F090DB17BA2793007EE2BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F090DA17BA2793007EE2BE /* CoreGraphics.framework */; };
-		AFCA5490191D617A00F58FEC /* WeemoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCA548F191D617A00F58FEC /* WeemoSDK.framework */; };
-		AFCA549B191D63CE00F58FEC /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCA549A191D63CE00F58FEC /* libopus.a */; };
-		AFCA549D191D63DC00F58FEC /* libvpx.ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCA549C191D63DC00F58FEC /* libvpx.ios.a */; };
-		AFCA549F191D6C7200F58FEC /* SDK Helper-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFCA549E191D6C7200F58FEC /* SDK Helper-Info.plist */; };
+		AF2BBB31192407480040F97A /* WeemoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2BBB30192407480040F97A /* WeemoSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5626824217ECB69900607829 /* weemo_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weemo_logo.png; sourceTree = "<group>"; };
 		562D3FEC17E842E200A36A27 /* DataGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataGroup.h; path = sources/DataGroup.h; sourceTree = "<group>"; };
 		562D3FED17E842E200A36A27 /* DataGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataGroup.m; path = sources/DataGroup.m; sourceTree = "<group>"; };
+		565E0699192129560017C3EF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		566440C417A9748C00979C18 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5668F2211795813F0049285B /* Weemo SDK5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weemo SDK5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5668F2241795813F0049285B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5668F2261795813F0049285B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5668F22C1795813F0049285B /* SDK Helper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SDK Helper-Info.plist"; sourceTree = "<group>"; };
 		5668F22E1795813F0049285B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5668F2301795813F0049285B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5668F2321795813F0049285B /* SDK Helper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDK Helper-Prefix.pch"; sourceTree = "<group>"; };
 		5668F2331795813F0049285B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = sources/AppDelegate.h; sourceTree = "<group>"; };
 		5668F2341795813F0049285B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = sources/AppDelegate.mm; sourceTree = "<group>"; };
+		566B9443192141A500EC5376 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CrashReporter.framework; path = support/CrashReporter.framework; sourceTree = "<group>"; };
 		566F4F7C17992EAB0019DE60 /* CallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallViewController.h; path = sources/CallViewController.h; sourceTree = "<group>"; };
 		566F4F7D17992EAB0019DE60 /* CallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallViewController.m; path = sources/CallViewController.m; sourceTree = "<group>"; };
 		5679ACCD17F19BE700015AB5 /* ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ipad.storyboard; sourceTree = "<group>"; };
@@ -60,8 +68,13 @@
 		567E4E1C18D30E0C00FDD63C /* AlertSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertSystem.m; path = sources/AlertSystem.m; sourceTree = "<group>"; };
 		567E4E1E18D30E1800FDD63C /* ringback.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ringback.aiff; sourceTree = "<group>"; };
 		567E4E1F18D30E1800FDD63C /* ringing.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ringing.aiff; sourceTree = "<group>"; };
+		568EA2431923BC99005B486A /* zipFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zipFile.h; sourceTree = "<group>"; };
+		568EA2441923BC99005B486A /* zipFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zipFile.m; sourceTree = "<group>"; };
 		568F80D518608FB1003BC973 /* pictures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = pictures.xcassets; sourceTree = "<group>"; };
+		56916BF817A6AE60002A7958 /* libvpx.ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvpx.ios.a; path = Libraries/libvpx.ios.a; sourceTree = SOURCE_ROOT; };
 		56B1D4A2187F00A800F05FA3 /* Protocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Protocols.h; path = sources/Protocols.h; sourceTree = "<group>"; };
+		56B9988D185B733700ECB5FD /* libopus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopus.a; sourceTree = "<group>"; };
+		56D8524A1923ECB900FF643A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		56EAF9D518608BD40056C3B9 /* iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iphone.storyboard; sourceTree = "<group>"; };
 		56F090CA17BA26E9007EE2BE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		56F090CC17BA26FF007EE2BE /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -72,10 +85,7 @@
 		56F090D617BA2754007EE2BE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		56F090D817BA2783007EE2BE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		56F090DA17BA2793007EE2BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AFCA548F191D617A00F58FEC /* WeemoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeemoSDK.framework; path = WeemoSDK/WeemoSDK.framework; sourceTree = "<group>"; };
-		AFCA549A191D63CE00F58FEC /* libopus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopus.a; path = WeemoSDK/Libraries/libopus.a; sourceTree = "<group>"; };
-		AFCA549C191D63DC00F58FEC /* libvpx.ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvpx.ios.a; path = WeemoSDK/Libraries/libvpx.ios.a; sourceTree = "<group>"; };
-		AFCA549E191D6C7200F58FEC /* SDK Helper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SDK Helper-Info.plist"; sourceTree = "<group>"; };
+		AF2BBB30192407480040F97A /* WeemoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeemoSDK.framework; path = WeemoSDK/WeemoSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,20 +93,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFCA549D191D63DC00F58FEC /* libvpx.ios.a in Frameworks */,
-				AFCA549B191D63CE00F58FEC /* libopus.a in Frameworks */,
-				AFCA5490191D617A00F58FEC /* WeemoSDK.framework in Frameworks */,
+				AF2BBB31192407480040F97A /* WeemoSDK.framework in Frameworks */,
+				56D8524B1923ECB900FF643A /* libz.dylib in Frameworks */,
+				565E069A192129560017C3EF /* MessageUI.framework in Frameworks */,
 				56F090DB17BA2793007EE2BE /* CoreGraphics.framework in Frameworks */,
 				56F090D917BA2783007EE2BE /* AVFoundation.framework in Frameworks */,
 				56F090D717BA2754007EE2BE /* CFNetwork.framework in Frameworks */,
 				56F090D517BA2745007EE2BE /* OpenGLES.framework in Frameworks */,
 				56F090D317BA2732007EE2BE /* QuartzCore.framework in Frameworks */,
+				566B9444192141A500EC5376 /* CrashReporter.framework in Frameworks */,
 				56F090D117BA2723007EE2BE /* CoreMedia.framework in Frameworks */,
 				56F090CF17BA2711007EE2BE /* GLKit.framework in Frameworks */,
 				56F090CD17BA26FF007EE2BE /* CoreVideo.framework in Frameworks */,
+				56B9988E185B733700ECB5FD /* libopus.a in Frameworks */,
 				56F090CB17BA26EA007EE2BE /* AudioToolbox.framework in Frameworks */,
 				5668F2251795813F0049285B /* UIKit.framework in Frameworks */,
 				5668F2271795813F0049285B /* Foundation.framework in Frameworks */,
+				56916BFB17A6AE60002A7958 /* libvpx.ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +119,9 @@
 		5619BCCF1797CA84003E0F6F /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				56B9988D185B733700ECB5FD /* libopus.a */,
+				56916BF817A6AE60002A7958 /* libvpx.ios.a */,
+				566440C417A9748C00979C18 /* README.md */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -133,9 +149,10 @@
 		5668F2231795813F0049285B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFCA549C191D63DC00F58FEC /* libvpx.ios.a */,
-				AFCA549A191D63CE00F58FEC /* libopus.a */,
-				AFCA548F191D617A00F58FEC /* WeemoSDK.framework */,
+				AF2BBB30192407480040F97A /* WeemoSDK.framework */,
+				56D8524A1923ECB900FF643A /* libz.dylib */,
+				566B9443192141A500EC5376 /* CrashReporter.framework */,
+				565E0699192129560017C3EF /* MessageUI.framework */,
 				56F090DA17BA2793007EE2BE /* CoreGraphics.framework */,
 				56F090D817BA2783007EE2BE /* AVFoundation.framework */,
 				56F090D617BA2754007EE2BE /* CFNetwork.framework */,
@@ -173,7 +190,9 @@
 		5668F22B1795813F0049285B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AFCA549E191D6C7200F58FEC /* SDK Helper-Info.plist */,
+				568EA2431923BC99005B486A /* zipFile.h */,
+				568EA2441923BC99005B486A /* zipFile.m */,
+				5668F22C1795813F0049285B /* SDK Helper-Info.plist */,
 				56EAF9D518608BD40056C3B9 /* iphone.storyboard */,
 				5679ACCD17F19BE700015AB5 /* ipad.storyboard */,
 				5668F22D1795813F0049285B /* InfoPlist.strings */,
@@ -252,12 +271,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5668F22F1795813F0049285B /* InfoPlist.strings in Resources */,
+				566440C517A9748C00979C18 /* README.md in Resources */,
 				567E4E2018D30E1800FDD63C /* ringback.aiff in Resources */,
 				56EAF9D618608BD40056C3B9 /* iphone.storyboard in Resources */,
 				567E4E2118D30E1800FDD63C /* ringing.aiff in Resources */,
 				568F80D618608FB1003BC973 /* pictures.xcassets in Resources */,
 				5626824317ECB69900607829 /* weemo_logo.png in Resources */,
-				AFCA549F191D6C7200F58FEC /* SDK Helper-Info.plist in Resources */,
 				5679ACCE17F19BE700015AB5 /* ipad.storyboard in Resources */,
 				5679ACD017F1ABBF00015AB5 /* weemo_white.png in Resources */,
 			);
@@ -273,6 +292,7 @@
 				5668F2311795813F0049285B /* main.m in Sources */,
 				5668F2351795813F0049285B /* AppDelegate.mm in Sources */,
 				566F4F7E17992EAB0019DE60 /* CallViewController.m in Sources */,
+				568EA2451923BC99005B486A /* zipFile.m in Sources */,
 				562D3FEE17E842E200A36A27 /* DataGroup.m in Sources */,
 				5679ACD317F1AD4B00015AB5 /* HomeViewController.m in Sources */,
 				567E4E1D18D30E0C00FDD63C /* AlertSystem.m in Sources */,
@@ -353,19 +373,17 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)\"/..",
-					"\"$(SRCROOT)/Libraries\"",
+					"$(inherited)",
+					"$(PROJECT_DIR)/support",
+					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/WeemoSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "support/SDK Helper-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/support/SDK Helper-Info.plist";
+				INFOPLIST_FILE = "support/SDK Helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LD_NO_PIE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/Libraries\"",
-					"$(PROJECT_DIR)/WeemoSDK/Libraries",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries";
 				PRODUCT_NAME = "Weemo SDK5";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -381,19 +399,17 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)\"/..",
-					"\"$(SRCROOT)/Libraries\"",
+					"$(inherited)",
+					"$(PROJECT_DIR)/support",
+					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/WeemoSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "support/SDK Helper-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/support/SDK Helper-Info.plist";
+				INFOPLIST_FILE = "support/SDK Helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LD_NO_PIE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/Libraries\"",
-					"$(PROJECT_DIR)/WeemoSDK/Libraries",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries";
 				PRODUCT_NAME = "Weemo SDK5";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

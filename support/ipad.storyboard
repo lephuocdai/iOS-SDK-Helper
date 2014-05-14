@@ -97,6 +97,25 @@
                                             <action selector="releaseButton:" destination="UUk-ml-oOL" eventType="touchCancel" id="q57-9o-fwN"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KE6-Ba-tkB">
+                                        <rect key="frame" x="440" y="207" width="186" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.11" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Check Availability">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkUser:" destination="UUk-ml-oOL" eventType="touchUpInside" id="iD9-1S-emM"/>
+                                            <action selector="pressButton:" destination="UUk-ml-oOL" eventType="touchDown" id="4ol-pP-5WE"/>
+                                            <action selector="releaseButton:" destination="UUk-ml-oOL" eventType="touchUpOutside" id="HRp-Lp-7Mm"/>
+                                            <action selector="releaseButton:" destination="UUk-ml-oOL" eventType="touchCancel" id="MFg-yg-wxR"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not authentified" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" id="JrV-LV-f8M">
                                         <rect key="frame" x="213" y="387" width="342" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -112,6 +131,7 @@
                     </view>
                     <connections>
                         <outlet property="b_call" destination="OcR-ks-2nU" id="vuh-Gn-GGZ"/>
+                        <outlet property="b_check" destination="KE6-Ba-tkB" id="72b-AL-mYi"/>
                         <outlet property="b_connect" destination="MBt-Dh-2x3" id="dyq-Lg-okX"/>
                         <outlet property="b_logo" destination="8ni-cq-RVp" id="Sru-SP-XRy"/>
                         <outlet property="l_connectionStatus" destination="JrV-LV-f8M" id="dV1-2e-zo2"/>

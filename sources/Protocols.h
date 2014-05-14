@@ -93,6 +93,8 @@ NSString * platformString()
 - (void)dgDidAuthenticate:(NSError *)did;
 - (void)dgDidDisconnect:(NSError *)did;
 
+//used to display a message in a non-obstrusive way (i.e. not a UIAlert)
+- (void)dgDisplayMessage:(NSString *)message during:(float)timer;
 @end
 
 @protocol contactProtocol <NSObject>

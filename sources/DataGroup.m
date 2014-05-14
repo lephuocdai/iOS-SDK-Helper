@@ -129,12 +129,13 @@ static id instance = NULL;
 	if (![self signOut])
 	{
 		_status = sta_connecting;
-		NSError *err;
+		NSError *error;
 		[[self loginDelegate] dgStatusChange:_status];
-		[Weemo WeemoWithAppID:[connectionParameters objectForKey:KEY_MOBILEAPPID] andDelegate:self error:&err];
-		if (err)
+		[Weemo setLogLevel:logLevel_Info];
+		[Weemo WeemoWithAppID:[connectionParameters objectForKey:KEY_MOBILEAPPID] andDelegate:self error:&error];
+		if (error)
 		{
-			NSLog(@"%s %@", __FUNCTION__, err);
+			NSLog(@"%s %@", __FUNCTION__, error?error:@"");
 			_status = sta_notConnected;
 			[[self loginDelegate] dgStatusChange:_status];
 		}
@@ -157,10 +158,10 @@ static id instance = NULL;
 {
 	if (alertView == av_lostConnection && buttonIndex == 0)
 	{
-			[[DataGroup instance] doDisconnect];
-			connectionParameters = nil;
-		}
+		[[DataGroup instance] doDisconnect];
+		connectionParameters = nil;
 	}
+}
 
 #pragma mark - Weemo Delegation
 
@@ -172,7 +173,7 @@ static id instance = NULL;
 		[[self loginDelegate] dgDidConnect:error];
 	if (error)
 	{
-		NSLog(@">>> %s %@", __FUNCTION__, error);
+		NSLog(@">>> %s %@", __FUNCTION__, error?error:@"");
 		return;
 
 	} else if ([connectionParameters objectForKey:KEY_TOKEN])
@@ -182,6 +183,16 @@ static id instance = NULL;
 									   andType:USERTYPE_INTERNAL];
 		[[self loginDelegate] dgStatusChange:sta_authenticating];
 	}
+	if ([[self loginDelegate] respondsToSelector:@selector(dgDisplayMessage:during:)])
+		[[self loginDelegate] dgDisplayMessage:@"Connected" during:.2];
+}
+
+- (void)weemoWillAuthenticate:(NSError *)error;
+{
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[av_lostConnection dismissWithClickedButtonIndex:-1 animated:YES];
+		av_lostConnection = nil;
+	});
 }
 
 - (void)weemoDidAuthenticate:(NSError *)error
@@ -194,7 +205,7 @@ static id instance = NULL;
 			av_lostConnection = nil;
 		}
 	});
-	NSLog(@">>> %s %@ -- call %@", __FUNCTION__, error, [[Weemo instance] activeCall]);
+	NSLog(@">>> %s %@", __FUNCTION__, error?error:@"");
 	if (connectionParameters)
 	{
 		if ([[connectionParameters allKeys]containsObject:KEY_DISPLA])
@@ -207,6 +218,8 @@ static id instance = NULL;
 	_status = error? sta_notConnected:sta_authenticated;
 	[[self loginDelegate] dgStatusChange:_status];
 	if (error)return;
+	if ([[self loginDelegate] respondsToSelector:@selector(dgDisplayMessage:during:)])
+		[[self loginDelegate] dgDisplayMessage:@"Authenticated" during:.2];
 	[[Weemo instance] setDisplayName:[self getEscapedContact:displayname]];
 	if ([[self loginDelegate] respondsToSelector:@selector(dgDidAuthenticate:)])
 		[[self loginDelegate] dgDidAuthenticate:error];
@@ -216,21 +229,25 @@ static id instance = NULL;
 - (void)weemoDidDisconnect:(NSError *)error
 {
 	NSLog(@">>> %s %@ (%@)", __FUNCTION__, error, statusName([self status]));
-	//here we deal with connection loss...
+
 	switch ([self status]) {
 		case sta_notConnected:
 		case sta_disconnecting:
+
 			_status = sta_notConnected;
 			[[self loginDelegate] dgStatusChange:_status];
 			if ([[self loginDelegate] respondsToSelector:@selector(dgDidDisconnect:)])
 				[[self loginDelegate] dgDidDisconnect:error];
+			if ([[self loginDelegate] respondsToSelector:@selector(dgDisplayMessage:during:)])
+				[[self loginDelegate] dgDisplayMessage:@"Disconnected" during:.2];
 			break;
 		default:
 		{	//Disconnection while not trying to disconnect -> problem
+			
 			if (!av_lostConnection)
 			{
-				av_lostConnection = [[UIAlertView alloc]initWithTitle:@"???"
-															  message:@"Network loss, please stand-by while we try reconnecting you."
+				av_lostConnection = [[UIAlertView alloc]initWithTitle:@""
+															  message:@"Reconnecting"
 															 delegate:self
 													cancelButtonTitle:@"Cancel"
 													otherButtonTitles: nil];

@@ -81,7 +81,6 @@
 	[[self b_switchVideo] setSelected:NO];
 	[[self b_toggleAudio] setSelected:NO];
 	[[self b_toggleVideo] setSelected:NO];
-	
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -284,7 +283,7 @@
 
 - (void)weemoCall:(id)sender videoReceiving:(BOOL)isReceiving
 {
-	NSLog(@">>>> %s %@",__FUNCTION__, isReceiving ? @"YES":@"NO");
+//	NSLog(@">>>> %s %@",__FUNCTION__, isReceiving ? @"YES":@"NO");
 	[self updateIdleStatus];
 	dispatch_async(dispatch_get_main_queue(), ^{
 		[[self v_videoIn] setHidden:!isReceiving];
@@ -295,7 +294,7 @@
 
 - (void)weemoCall:(id)sender videoSending:(BOOL)isSending
 {
-	NSLog(@">>>> %s %@", __FUNCTION__, isSending ? @"YES":@"NO");
+//	NSLog(@">>>> %s %@", __FUNCTION__, isSending ? @"YES":@"NO");
 	[self updateIdleStatus];
 	dispatch_async(dispatch_get_main_queue(), ^{
 		[[self b_toggleVideo] setSelected:isSending];

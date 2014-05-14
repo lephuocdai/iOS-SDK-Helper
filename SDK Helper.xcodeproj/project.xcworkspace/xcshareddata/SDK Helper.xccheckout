@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>16D8BEA4-41F4-4234-94ED-925D5F32CE7C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SDK Helper</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>02C53F88-9DAC-421F-82C5-9C22E5994D6E</key>
+		<string>https://github.com/weemo/iOS-SDK-Helper.git</string>
+		<key>CDC3C301-BCD7-4399-87FA-ED89F770D9EF</key>
+		<string>https://github.com/weemo/iOS-SDK.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SDK Helper.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>02C53F88-9DAC-421F-82C5-9C22E5994D6E</key>
+		<string>../..</string>
+		<key>CDC3C301-BCD7-4399-87FA-ED89F770D9EF</key>
+		<string>../../WeemoSDK</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/weemo/iOS-SDK-Helper.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>02C53F88-9DAC-421F-82C5-9C22E5994D6E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>02C53F88-9DAC-421F-82C5-9C22E5994D6E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-SDK-Helper</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CDC3C301-BCD7-4399-87FA-ED89F770D9EF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WeemoSDK</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -52,7 +52,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Swe-Jv-fIo">
-                                        <rect key="frame" x="60" y="236" width="201" height="31"/>
+                                        <rect key="frame" x="60" y="247" width="201" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.11" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -98,8 +98,27 @@
                                             <action selector="releaseButton:" destination="q8k-Te-AYT" eventType="touchUpOutside" id="fdX-Z2-zBf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Fc-gT-Ku5">
+                                        <rect key="frame" x="60" y="208" width="201" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.11" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Check Availability">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkUser:" destination="q8k-Te-AYT" eventType="touchUpInside" id="PhJ-Tf-CLT"/>
+                                            <action selector="pressButton:" destination="q8k-Te-AYT" eventType="touchDown" id="WjH-HH-cLl"/>
+                                            <action selector="releaseButton:" destination="q8k-Te-AYT" eventType="touchUpOutside" id="1I8-Gc-SFq"/>
+                                            <action selector="releaseButton:" destination="q8k-Te-AYT" eventType="touchCancel" id="Jz9-Kz-leM"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not authenticated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" id="DTF-3T-UGP">
-                                        <rect key="frame" x="0.0" y="281" width="320" height="21"/>
+                                        <rect key="frame" x="0.0" y="286" width="320" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,6 +132,7 @@
                     </view>
                     <connections>
                         <outlet property="b_call" destination="V1d-Dw-H4h" id="P7w-h5-ByT"/>
+                        <outlet property="b_check" destination="3Fc-gT-Ku5" id="O99-cj-s1d"/>
                         <outlet property="b_connect" destination="Swe-Jv-fIo" id="n9u-gq-iHT"/>
                         <outlet property="b_logo" destination="Mkl-6a-0Ep" id="rcN-z2-Exf"/>
                         <outlet property="l_connectionStatus" destination="DTF-3T-UGP" id="c17-af-QaI"/>

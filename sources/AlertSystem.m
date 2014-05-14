@@ -1,4 +1,5 @@
 #import "AlertSystem.h"
+#import <QuartzCore/QuartzCore.h>
 
 static AlertSystem* sharedAlert = nil;
 
@@ -11,6 +12,10 @@ static AlertSystem* sharedAlert = nil;
 	NSTimer *riTimer;
 	SystemSoundID ring;
 	SystemSoundID proceed;
+	
+	UILabel *displayView;
+	float animTimer;
+	NSTimer *displayTimer;
 }
 
 @property (nonatomic) UILocalNotification *ln_callincoming;
@@ -143,6 +148,63 @@ static AlertSystem* sharedAlert = nil;
 		[[UIApplication sharedApplication] cancelLocalNotification:[self ln_callincoming]];
 	[self setLn_callincoming:nil];
 }
+
+- (void)displayMessage:(NSString *)message during:(float)timer inView:(UIView *)target animated:(BOOL)a
+{
+	if (!displayView)
+	{
+		displayView = [[UILabel alloc] init];
+		[displayView setTextAlignment:NSTextAlignmentCenter];
+		[displayView setTextColor:[UIColor colorWithWhite:1. alpha:1.]];
+
+		[[displayView layer] setBackgroundColor:[UIColor colorWithWhite:0. alpha:.6].CGColor];
+		[displayView setBackgroundColor:[UIColor colorWithWhite:0. alpha:0.]];
+	}
+	animTimer = a?timer:0.;
+	[displayTimer invalidate];
+	
+	dispatch_async(dispatch_get_main_queue() ,^{
+		[UIView animateWithDuration:animTimer animations:^{
+			[displayView setAlpha:0.];
+		} completion:^(BOOL finished) {
+			[displayView setText:message];
+			[displayView sizeToFit];
+			CGRect textBounds= [displayView bounds];
+			textBounds.size.width += 30.;
+			textBounds.size.height += 30.;
+			[displayView setFrame:textBounds];
+			[displayView setCenter:CGPointMake([target bounds].size.width/2., [target bounds].size.height/2.)];
+			[self displayViewUpdate];
+			[target addSubview:displayView];
+
+			[UIView animateWithDuration:animTimer animations:^{
+				[displayView setAlpha:1.];
+			}completion:^(BOOL finished) {
+				displayTimer = [NSTimer scheduledTimerWithTimeInterval:1. target:self
+															  selector:@selector(dismissDisplayView:)
+															  userInfo:nil repeats:NO];
+			}];
+		}];
+	});
+}
+
+- (void)dismissDisplayView:(NSTimer *)t
+{
+	dispatch_async(dispatch_get_main_queue() ,^{
+		[UIView animateWithDuration:animTimer animations:^{
+			[displayView setAlpha:0.];
+			[displayView removeFromSuperview];
+			displayView = nil;
+		}];
+	});
+}
+
+- (void)displayViewUpdate
+{
+	[[displayView layer] setCornerRadius:10.];
+	[[displayView layer] setShouldRasterize:YES];
+}
+
 
 
 @end

@@ -60,14 +60,4 @@
  */
 - (IBAction)toggleAudio:(id)sender;
 
-
-#pragma mark - WeemoCallDelegate
-//Two methods of the delegate are not implemented
-- (void)weemoCall:(id)sender videoReceiving:(BOOL)isReceiving;
-- (void)weemoCall:(id)sender videoSending:(BOOL)isSending;
-- (void)weemoCall:(id)sender videoProfile:(int)profile;
-- (void)weemoCall:(id)sender callStatus:(int)status;
-- (void)weemoCall:(id)call audioSending:(BOOL)isSending;
-- (void)weemoCall:(id)sender videoSource:(int)source;
-- (void)weemoCall:(id)sender videoOutSizeChange:(CGSize)size;
 @end

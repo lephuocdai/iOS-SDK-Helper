@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CallViewController.h"
+#import <MessageUI/MessageUI.h>
+static NSString *mailSubject  =@"WeemoSDK Helper iPhoneOS %@ %@ %@";
+static NSString *mailRecipients = @"mobilesdk@weemo.com";
 
-@interface HomeViewController : UIViewController <UITextFieldDelegate, contactProtocol, loginProtocol, UIAlertViewDelegate>
+@interface HomeViewController : UIViewController <UITextFieldDelegate, contactProtocol, loginProtocol, UIAlertViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic) CallViewController *cvc_active;
 
@@ -23,7 +26,7 @@
 
 @property (nonatomic, weak) IBOutlet UITextField *tf_contactid;
 @property (nonatomic, weak) IBOutlet UIButton *b_call;
-
+@property (nonatomic, weak) IBOutlet UIButton *b_check;
 @property (nonatomic, weak) IBOutlet UIView *v_allview;
 
 @property (nonatomic) BOOL isFullscreen;
